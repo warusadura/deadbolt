@@ -8,18 +8,55 @@
     <property name="default-width">500</property>
     <property name="default-height">300</property>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="box">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
         <property name="orientation">vertical</property>
         <child>
-          <placeholder/>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Please create a master password.</property>
+            <property name="track-visited-links">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="padding">16</property>
+            <property name="position">0</property>
+          </packing>
         </child>
         <child>
-          <placeholder/>
+          <object class="GtkEntry" id="password_field">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="max-length">10</property>
+            <property name="visibility">False</property>
+            <property name="input-purpose">password</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="padding">20</property>
+            <property name="position">1</property>
+          </packing>
         </child>
         <child>
-          <placeholder/>
+          <object class="GtkButton" id="password_save_button">
+            <property name="label" translatable="yes">Save</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="pressed" handler="initial_pwd_button_pressed" object="password_field" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="padding">1</property>
+            <property name="position">3</property>
+          </packing>
         </child>
       </object>
     </child>

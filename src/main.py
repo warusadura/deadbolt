@@ -1,6 +1,6 @@
 # Copyright (C) 2022 Dhanuka Warusadura
 
-from ui import run
+from gtk_ui import run
 
 def main():
     run()

@@ -11,15 +11,54 @@
       <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
         <property name="orientation">vertical</property>
         <child>
-          <placeholder/>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Please enter the master password.</property>
+            <property name="track-visited-links">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="padding">14</property>
+            <property name="position">0</property>
+          </packing>
         </child>
         <child>
-          <placeholder/>
+          <object class="GtkEntry" id="guard_password_input">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="max-length">10</property>
+            <property name="visibility">False</property>
+            <property name="max-width-chars">11</property>
+            <property name="input-purpose">password</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="padding">14</property>
+            <property name="position">1</property>
+          </packing>
         </child>
         <child>
-          <placeholder/>
+          <object class="GtkButton" id="submit_button">
+            <property name="label" translatable="yes">Submit</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image-position">top</property>
+            <signal name="pressed" handler="submit_button_pressed" object="guard_password_input" after="yes" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="padding">10</property>
+            <property name="position">2</property>
+          </packing>
         </child>
       </object>
     </child>
