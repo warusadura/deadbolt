@@ -1,0 +1,9 @@
+[package]
+name = "deadbolt"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+sqlite = "0.31.1"
+openssl = "0.10.57"
